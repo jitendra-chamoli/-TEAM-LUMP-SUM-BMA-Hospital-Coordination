@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Design tokens. Compact, clinical UI: one sans family, small radii, quiet borders.
+   Colours keep the existing blue brand; semantic colours use Tailwind's emerald/amber/red. */
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+
+  --color-canvas: #f6f7f9;
+  --color-line: #e3e6eb;
+}
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-canvas text-slate-900 font-sans antialiased;
+    font-size: 14px;
+    font-feature-settings: "cv11", "ss01";
+  }
+  ::selection { @apply bg-brand-100; }
+  :focus-visible { @apply outline-none; }
+}
+
+@utility tabular { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "bma-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Moves the demo ambulances through the server's telemetry API. Demo only.",
+  "main": "simulate.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env simulate.js"
+  },
+  "engines": {
+    "node": ">=22.9"
+  }
+}
