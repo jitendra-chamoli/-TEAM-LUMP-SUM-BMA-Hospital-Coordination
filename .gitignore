@@ -1,0 +1,25 @@
+# Dependencies & builds
+node_modules/
+dist/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets — copy the matching .env.example / .env.docker.example instead
+.env
+.env.*
+!.env.example
+!.env.docker.example
+
+# Database dumps (contain real users' data)
+backup-*.sql
+*.sql.bak
+*.dump
+
+# Local tools & OS files
+.claude/
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db

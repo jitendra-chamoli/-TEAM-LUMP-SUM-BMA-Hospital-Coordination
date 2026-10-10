@@ -1,0 +1,7 @@
+# Normalise line endings so the repo works the same on Windows, macOS and Linux (and in Docker)
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.xlsx binary
+*.pkl binary
